@@ -1,0 +1,8 @@
+# API key for generate-music.py: never commit
+.env
+
+# local tooling and generation leftovers
+.claude/
+music/generate.log
+music/last-response.json
+__pycache__/

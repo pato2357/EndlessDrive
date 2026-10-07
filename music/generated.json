@@ -1,0 +1,258 @@
+[
+ {
+  "file": "night/夜更けの落ち葉.mp3",
+  "model": "lyria-3.5",
+  "time": "night",
+  "biome": "autumn",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 68 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Late-night drive under the stars on an empty road. Dreamy, calm, introspective and a little sleepy.\nScenery: Mellow jazz guitar and warm Rhodes, cozy and slightly melancholic, falling maple leaves.\nAdd a warm, round bassline that carries the groove.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:25:14"
+ },
+ {
+  "file": "evening/帰り道の木漏れ日.mp3",
+  "model": "lyria-3.5",
+  "time": "evening",
+  "biome": "forest",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 74 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Driving into the sunset at golden hour. Bittersweet, nostalgic and gentle, warm orange light.\nScenery: Warm muted guitar and soft kalimba, earthy acoustic textures, cool pine-forest air.\nAdd a warm, round bassline that carries the groove.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:26:57"
+ },
+ {
+  "file": "day/陽だまりの春の窓.mp3",
+  "model": "lyria-3.5",
+  "time": "day",
+  "biome": "sakura",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 82 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Sunny afternoon cruise with the windows down. Easygoing, warm and groovy, carefree head-nodding feel.\nScenery: Subtle koto and Japanese pentatonic phrases over Rhodes, gentle spring breeze with cherry blossoms.\nLet a soft melody return as a recurring motif.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:27:47"
+ },
+ {
+  "file": "day/白い雲と落ち葉.mp3",
+  "model": "lyria-3.5",
+  "time": "day",
+  "biome": "autumn",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 82 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Sunny afternoon cruise with the windows down. Easygoing, warm and groovy, carefree head-nodding feel.\nScenery: Mellow jazz guitar and warm Rhodes, cozy and slightly melancholic, falling maple leaves.\nKeep the arrangement sparse and spacious.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:28:22"
+ },
+ {
+  "file": "night/星降る砂の轍.mp3",
+  "model": "lyria-3.5",
+  "time": "night",
+  "biome": "desert",
+  "prompt": "Instrumental lo-fi chillhop, about 68 BPM, warm Rhodes chords, soft drums, mellow bass, night drive, desert scenery. No vocals.",
+  "created": "2026-10-06 17:29:02"
+ },
+ {
+  "file": "morning/珈琲と森の匂い.mp3",
+  "model": "lyria-3.5",
+  "time": "morning",
+  "biome": "forest",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 80 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Bright, fresh early-morning drive. Optimistic and gentle, like the first coffee of the day, soft sunlight through morning mist.\nScenery: Warm muted guitar and soft kalimba, earthy acoustic textures, cool pine-forest air.\nKeep the arrangement sparse and spacious.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:29:33"
+ },
+ {
+  "file": "morning/朝もやの白い吐息.mp3",
+  "model": "lyria-3.5",
+  "time": "morning",
+  "biome": "snow",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 80 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Bright, fresh early-morning drive. Optimistic and gentle, like the first coffee of the day, soft sunlight through morning mist.\nScenery: Soft glockenspiel and celesta with airy pads, cold and sparkling winter air.\nInclude a gentle electric piano solo in the middle section.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:30:24"
+ },
+ {
+  "file": "morning/珈琲と蜃気楼.mp3",
+  "model": "lyria-3.5",
+  "time": "morning",
+  "biome": "desert",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 80 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Bright, fresh early-morning drive. Optimistic and gentle, like the first coffee of the day, soft sunlight through morning mist.\nScenery: Warm slide guitar with hazy wide reverb, open and spacious, heat shimmer over red sand.\nUse relaxed, swung drums with brushed snares.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:31:10"
+ },
+ {
+  "file": "morning/朝焼けの風車.mp3",
+  "model": "lyria-3.5",
+  "time": "morning",
+  "biome": "lavender",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 80 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Bright, fresh early-morning drive. Optimistic and gentle, like the first coffee of the day, soft sunlight through morning mist.\nScenery: Soft flute and nylon-string guitar, dreamy and floral, calm purple fields.\nKeep the arrangement sparse and spacious.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:31:45"
+ },
+ {
+  "file": "evening/黄昏のそよ風.mp3",
+  "model": "lyria-3.5",
+  "time": "evening",
+  "biome": "meadow",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 74 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Driving into the sunset at golden hour. Bittersweet, nostalgic and gentle, warm orange light.\nScenery: Light acoustic guitar and a soft airy synth lead, breezy open green fields.\nAdd a warm, round bassline that carries the groove.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:32:17"
+ },
+ {
+  "file": "day/昼下がりの木漏れ日.mp3",
+  "model": "lyria-3.5",
+  "time": "day",
+  "biome": "forest",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 82 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Sunny afternoon cruise with the windows down. Easygoing, warm and groovy, carefree head-nodding feel.\nScenery: Warm muted guitar and soft kalimba, earthy acoustic textures, cool pine-forest air.\nStart with a short, soft intro before the beat comes in.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:32:51"
+ },
+ {
+  "file": "evening/黄昏の桜並木.mp3",
+  "model": "lyria-3.5",
+  "time": "evening",
+  "biome": "sakura",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 74 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Driving into the sunset at golden hour. Bittersweet, nostalgic and gentle, warm orange light.\nScenery: Subtle koto and Japanese pentatonic phrases over Rhodes, gentle spring breeze with cherry blossoms.\nStart with a short, soft intro before the beat comes in.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:33:31"
+ },
+ {
+  "file": "night/月明かりの海風.mp3",
+  "model": "lyria-3.5",
+  "time": "night",
+  "biome": "coast",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 68 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Late-night drive under the stars on an empty road. Dreamy, calm, introspective and a little sleepy.\nScenery: Clean surf guitar or ukulele, relaxed ocean-breeze feel along a seaside road.\nAdd a warm, round bassline that carries the groove.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:34:02"
+ },
+ {
+  "file": "day/陽だまりの霧氷.mp3",
+  "model": "lyria-3.5",
+  "time": "day",
+  "biome": "snow",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 82 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Sunny afternoon cruise with the windows down. Easygoing, warm and groovy, carefree head-nodding feel.\nScenery: Soft glockenspiel and celesta with airy pads, cold and sparkling winter air.\nUse relaxed, swung drums with brushed snares.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:34:59"
+ },
+ {
+  "file": "evening/黄昏の防波堤.mp3",
+  "model": "lyria-3.5",
+  "time": "evening",
+  "biome": "coast",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 74 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Driving into the sunset at golden hour. Bittersweet, nostalgic and gentle, warm orange light.\nScenery: Clean surf guitar or ukulele, relaxed ocean-breeze feel along a seaside road.\nAdd a warm, round bassline that carries the groove.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:35:32"
+ },
+ {
+  "file": "morning/朝もやのそよ風.mp3",
+  "model": "lyria-3.5",
+  "time": "morning",
+  "biome": "meadow",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 80 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Bright, fresh early-morning drive. Optimistic and gentle, like the first coffee of the day, soft sunlight through morning mist.\nScenery: Light acoustic guitar and a soft airy synth lead, breezy open green fields.\nAdd a warm, round bassline that carries the groove.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:36:21"
+ },
+ {
+  "file": "evening/帰り道の霧氷.mp3",
+  "model": "lyria-3.5",
+  "time": "evening",
+  "biome": "snow",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 74 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Driving into the sunset at golden hour. Bittersweet, nostalgic and gentle, warm orange light.\nScenery: Soft glockenspiel and celesta with airy pads, cold and sparkling winter air.\nStart with a short, soft intro before the beat comes in.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:36:55"
+ },
+ {
+  "file": "night/夜更けの白い吐息.mp3",
+  "model": "lyria-3.5",
+  "time": "night",
+  "biome": "snow",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 68 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Late-night drive under the stars on an empty road. Dreamy, calm, introspective and a little sleepy.\nScenery: Soft glockenspiel and celesta with airy pads, cold and sparkling winter air.\nLet a soft melody return as a recurring motif.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:37:26"
+ },
+ {
+  "file": "morning/夜明けの防波堤.mp3",
+  "model": "lyria-3.5",
+  "time": "morning",
+  "biome": "coast",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 80 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Bright, fresh early-morning drive. Optimistic and gentle, like the first coffee of the day, soft sunlight through morning mist.\nScenery: Clean surf guitar or ukulele, relaxed ocean-breeze feel along a seaside road.\nLet a soft melody return as a recurring motif.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:38:03"
+ },
+ {
+  "file": "night/夜更けの木漏れ日.mp3",
+  "model": "lyria-3.5",
+  "time": "night",
+  "biome": "forest",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 68 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Late-night drive under the stars on an empty road. Dreamy, calm, introspective and a little sleepy.\nScenery: Warm muted guitar and soft kalimba, earthy acoustic textures, cool pine-forest air.\nInclude a gentle electric piano solo in the middle section.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:39:26"
+ },
+ {
+  "file": "evening/夕焼けの峠道.mp3",
+  "model": "lyria-3.5",
+  "time": "evening",
+  "biome": "autumn",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 74 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Driving into the sunset at golden hour. Bittersweet, nostalgic and gentle, warm orange light.\nScenery: Mellow jazz guitar and warm Rhodes, cozy and slightly melancholic, falling maple leaves.\nKeep the arrangement sparse and spacious.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:40:18"
+ },
+ {
+  "file": "night/月明かりの紫の丘.mp3",
+  "model": "lyria-3.5",
+  "time": "night",
+  "biome": "lavender",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 68 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Late-night drive under the stars on an empty road. Dreamy, calm, introspective and a little sleepy.\nScenery: Soft flute and nylon-string guitar, dreamy and floral, calm purple fields.\nAdd a warm, round bassline that carries the groove.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:40:47"
+ },
+ {
+  "file": "evening/夕焼けの蜃気楼.mp3",
+  "model": "lyria-3.5",
+  "time": "evening",
+  "biome": "desert",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 74 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Driving into the sunset at golden hour. Bittersweet, nostalgic and gentle, warm orange light.\nScenery: Warm slide guitar with wide reverb, open and spacious, a sunlit highway across a wide desert.\nAdd a warm, round bassline that carries the groove.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:41:21"
+ },
+ {
+  "file": "day/昼下がりの海風.mp3",
+  "model": "lyria-3.5",
+  "time": "day",
+  "biome": "coast",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 82 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Sunny afternoon cruise with the windows down. Easygoing, warm and groovy, carefree head-nodding feel.\nScenery: Clean surf guitar or ukulele, relaxed ocean-breeze feel along a seaside road.\nUse relaxed, swung drums with brushed snares.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:41:54"
+ },
+ {
+  "file": "day/昼下がりのラベンダー.mp3",
+  "model": "lyria-3.5",
+  "time": "day",
+  "biome": "lavender",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 82 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Sunny afternoon cruise with the windows down. Easygoing, warm and groovy, carefree head-nodding feel.\nScenery: Soft flute and nylon-string guitar, dreamy and floral, calm purple fields.\nUse relaxed, swung drums with brushed snares.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:42:36"
+ },
+ {
+  "file": "day/陽だまりの砂の轍.mp3",
+  "model": "lyria-3.5",
+  "time": "day",
+  "biome": "desert",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 82 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Sunny afternoon cruise with the windows down. Easygoing, warm and groovy, carefree head-nodding feel.\nScenery: Warm slide guitar with wide reverb, open and spacious, a sunlit highway across a wide desert.\nStart with a short, soft intro before the beat comes in.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:43:16"
+ },
+ {
+  "file": "night/月明かりの春の窓.mp3",
+  "model": "lyria-3.5",
+  "time": "night",
+  "biome": "sakura",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 68 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Late-night drive under the stars on an empty road. Dreamy, calm, introspective and a little sleepy.\nScenery: Subtle koto and Japanese pentatonic phrases over Rhodes, gentle spring breeze with cherry blossoms.\nKeep the arrangement sparse and spacious.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:43:55"
+ },
+ {
+  "file": "night/夜更けの草原.mp3",
+  "model": "lyria-3.5",
+  "time": "night",
+  "biome": "meadow",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 68 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Late-night drive under the stars on an empty road. Dreamy, calm, introspective and a little sleepy.\nScenery: Light acoustic guitar and a soft airy synth lead, breezy open green fields.\nStart with a short, soft intro before the beat comes in.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:44:34"
+ },
+ {
+  "file": "day/午後のそよ風.mp3",
+  "model": "lyria-3.5",
+  "time": "day",
+  "biome": "meadow",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 82 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Sunny afternoon cruise with the windows down. Easygoing, warm and groovy, carefree head-nodding feel.\nScenery: Light acoustic guitar and a soft airy synth lead, breezy open green fields.\nKeep the arrangement sparse and spacious.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:45:20"
+ },
+ {
+  "file": "evening/黄昏の風車.mp3",
+  "model": "lyria-3.5",
+  "time": "evening",
+  "biome": "lavender",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 74 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Driving into the sunset at golden hour. Bittersweet, nostalgic and gentle, warm orange light.\nScenery: Soft flute and nylon-string guitar, dreamy and floral, calm purple fields.\nInclude a gentle electric piano solo in the middle section.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:46:06"
+ },
+ {
+  "file": "morning/朝もやの峠道.mp3",
+  "model": "lyria-3.5",
+  "time": "morning",
+  "biome": "autumn",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 80 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Bright, fresh early-morning drive. Optimistic and gentle, like the first coffee of the day, soft sunlight through morning mist.\nScenery: Mellow jazz guitar and warm Rhodes, cozy and slightly melancholic, falling maple leaves.\nUse relaxed, swung drums with brushed snares.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:46:38"
+ },
+ {
+  "file": "morning/珈琲と花びら.mp3",
+  "model": "lyria-3.5",
+  "time": "morning",
+  "biome": "sakura",
+  "prompt": "Instrumental lo-fi chillhop for a relaxing endless road trip. Instrumental only, no vocals, no singing, no lyrics.\nTempo around 80 BPM, laid-back swung drums with a soft kick and brushed snare, warm Rhodes electric piano playing jazzy 7th and 9th chords, round mellow bass.\nMood: Bright, fresh early-morning drive. Optimistic and gentle, like the first coffee of the day, soft sunlight through morning mist.\nScenery: Subtle koto and Japanese pentatonic phrases over Rhodes, gentle spring breeze with cherry blossoms.\nUse relaxed, swung drums with brushed snares.\nClean, warm mix with only very subtle tape warmth. No vinyl crackle, no hiss, no noise.\nSteady energy from start to finish so it works as continuous background music in a playlist.",
+  "created": "2026-10-06 17:47:16"
+ }
+]
