@@ -97,32 +97,76 @@ def load_key():
     return key
 
 
-def find_audio(obj):
-    """Return (base64 data, mime type) from an interactions response, wherever the audio sits."""
-    if isinstance(obj, dict):
-        for k in ('output_audio', 'outputAudio'):
-            a = obj.get(k)
-            if isinstance(a, dict) and a.get('data'):
-                return a['data'], a.get('mime_type') or a.get('mimeType')
-        if obj.get('type') == 'audio' and obj.get('data'):
-            return obj['data'], obj.get('mime_type') or obj.get('mimeType')
-        for v in obj.values():
-            r = find_audio(v)
-            if r:
-                return r
-    elif isinstance(obj, list):
-        for v in obj:
-            r = find_audio(v)
-            if r:
-                return r
-    return None
+# Hard limits on what we accept from the API. A 3-minute MP3 is about 5 MB (7 MB as base64) and a WAV
+# about 32 MB, so anything far beyond these is treated as a broken or hostile response and nothing is written.
+MAX_RESPONSE_BYTES = 96 * 1024 * 1024
+MAX_AUDIO_BYTES = 64 * 1024 * 1024
+MAX_ERROR_BYTES = 8 * 1024
+MAX_JSON_DEPTH = 10
+MAX_JSON_NODES = 20000
+DIAG_CHARS = 4000
 
 
 class Blocked(Exception):
-    pass
+    """The safety filter rejected the prompt (HTTP 400); nothing was generated or billed."""
+
+
+class NotBilled(Exception):
+    """The request was refused before any work was done (4xx, or rate limits that never cleared)."""
+
+
+class Ambiguous(Exception):
+    """The request may have reached the server and been processed; never resent automatically."""
+
+
+def find_audio(res):
+    """Return (base64 data, mime type) from an interactions response, searching at most
+    MAX_JSON_DEPTH levels and MAX_JSON_NODES nodes."""
+    stack, seen = [(res, 0)], 0
+    while stack:
+        obj, depth = stack.pop()
+        seen += 1
+        if seen > MAX_JSON_NODES or depth > MAX_JSON_DEPTH:
+            raise Ambiguous('response JSON is larger or deeper than expected; not saved')
+        if isinstance(obj, dict):
+            for k in ('output_audio', 'outputAudio'):
+                a = obj.get(k)
+                if isinstance(a, dict) and isinstance(a.get('data'), str):
+                    return a['data'], a.get('mime_type') or a.get('mimeType')
+            if obj.get('type') == 'audio' and isinstance(obj.get('data'), str):
+                return obj['data'], obj.get('mime_type') or obj.get('mimeType')
+            stack.extend((v, depth + 1) for v in obj.values() if isinstance(v, (dict, list)))
+        elif isinstance(obj, list):
+            stack.extend((v, depth + 1) for v in obj if isinstance(v, (dict, list)))
+    return None
+
+
+def decode_audio(data, mime, wav):
+    if len(data) > MAX_AUDIO_BYTES * 4 // 3 + 4:
+        raise RuntimeError('audio in the response is larger than expected; not saved')
+    try:
+        audio = base64.b64decode(data, validate=True)
+    except (ValueError, TypeError):
+        raise RuntimeError('audio in the response is not valid base64; not saved')
+    if len(audio) > MAX_AUDIO_BYTES:
+        raise RuntimeError('decoded audio is larger than expected; not saved')
+    mime = mime or ('audio/wav' if wav else 'audio/mpeg')
+    is_wav = audio[:4] == b'RIFF' and audio[8:12] == b'WAVE'
+    is_mp3 = audio[:3] == b'ID3' or (len(audio) > 1 and audio[0] == 0xFF and (audio[1] & 0xE0) == 0xE0)
+    if not (is_wav or is_mp3):
+        raise RuntimeError('response did not contain MP3 or WAV audio; not saved')
+    return audio, ('audio/wav' if is_wav else 'audio/mpeg')
+
+
+def save_diagnostic(res):
+    text = json.dumps(res, ensure_ascii=False)[:DIAG_CHARS]
+    with open(os.path.join(MUSIC, 'last-response.json'), 'w', encoding='utf-8') as f:
+        f.write(text)
 
 
 def generate(key, model, prompt, wav):
+    """One generation request. Only HTTP 429 (refused, nothing generated) is retried; a timeout,
+    dropped connection or 5xx may already have produced (and billed) a song, so it is never resent."""
     body = {'model': model, 'input': prompt}
     if wav:
         body['response_format'] = {'type': 'audio'}
@@ -131,33 +175,39 @@ def generate(key, model, prompt, wav):
     for attempt in range(5):
         try:
             with urllib.request.urlopen(req, timeout=900) as r:
-                res = json.loads(r.read().decode('utf-8'))
+                length = r.headers.get('Content-Length')
+                if length and length.isdigit() and int(length) > MAX_RESPONSE_BYTES:
+                    raise Ambiguous('response is larger than expected; not read')
+                raw = r.read(MAX_RESPONSE_BYTES + 1)
+            if len(raw) > MAX_RESPONSE_BYTES:
+                raise Ambiguous('response is larger than expected; not saved')
+            try:
+                res = json.loads(raw.decode('utf-8'))
+            except (ValueError, RecursionError):
+                raise Ambiguous('response was not valid JSON; not saved')
             found = find_audio(res)
             if not found:
-                with open(os.path.join(MUSIC, 'last-response.json'), 'w', encoding='utf-8') as f:
-                    json.dump(res, f, ensure_ascii=False, indent=1)
-                raise RuntimeError('no audio in response (saved to music/last-response.json)')
-            data, mime = found
-            return base64.b64decode(data), (mime or ('audio/wav' if wav else 'audio/mpeg'))
+                save_diagnostic(res)
+                raise Ambiguous('no audio in response (first part saved to music/last-response.json)')
+            return decode_audio(found[0], found[1], wav)
         except urllib.error.HTTPError as e:
-            detail = e.read().decode('utf-8', 'replace')[:600]
+            detail = e.read(MAX_ERROR_BYTES).decode('utf-8', 'replace')[:600]
             if e.code == 400 and ('prohibited_content' in detail or 'content_blocked' in detail):
                 raise Blocked(detail)
             if e.code == 429 and ('limit: 0' in detail or 'Free Tier' in detail):
-                raise RuntimeError('HTTP 403-like quota error: this key is on the free tier, which has no Lyria quota. '
-                                   'Enable billing for the project at https://aistudio.google.com/ and run again.\n    ' + detail)
-            if e.code in (429, 500, 502, 503, 504) and attempt < 4:
+                raise NotBilled('this key is on the free tier, which has no Lyria quota. '
+                                'Enable billing for the project at https://aistudio.google.com/ and run again.\n    ' + detail)
+            if e.code == 429 and attempt < 4:
                 wait = 20 * (attempt + 1)
-                print(f'    HTTP {e.code}, retrying in {wait}s ...')
+                print(f'    HTTP 429 (rate limited, nothing generated), retrying in {wait}s ...')
                 time.sleep(wait)
                 continue
-            raise RuntimeError(f'HTTP {e.code}: {detail}')
-        except (urllib.error.URLError, TimeoutError) as e:
-            if attempt < 4:
-                print(f'    network error ({e}), retrying ...')
-                time.sleep(15)
-                continue
-            raise
+            if 400 <= e.code < 500:
+                raise NotBilled(f'HTTP {e.code}: {detail}')
+            raise Ambiguous(f'HTTP {e.code}: {detail}')
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            raise Ambiguous(f'network error ({e})')
+    raise NotBilled('still rate limited after several tries')
 
 
 def write_playlist():
@@ -227,7 +277,7 @@ def main():
             done[(e['time'], e['biome'])] = done.get((e['time'], e['biome']), 0) + 1
     jobs = plan(a.count, times, biomes, a.seed, done)
     cost = len(jobs) * PRICE.get(a.model, 0.08)
-    print(f'{len(jobs)} songs with {a.model}  (about ${cost:.2f})')
+    print(f'{len(jobs)} songs with {a.model}  (about ${cost:.2f}; at most {len(jobs)} billable requests, failures are not resent)')
     for j in jobs:
         print(f"  {j['time']:<8} {j['biome']:<9} {j['title']}")
     if a.dry_run:
@@ -238,29 +288,51 @@ def main():
         sys.exit('GEMINI_API_KEY was not found. Put GEMINI_API_KEY=... in .env next to this script.')
     if not a.yes and input(f'Generate these for about ${cost:.2f}? [y/N] ').strip().lower() != 'y':
         return
-    ok = fails = 0
+    # Requests that may be billed (successes and ambiguous failures) never exceed the number of songs
+    # that was confirmed above, so the estimate is also the worst case.
+    budget = len(jobs)
+    billable = ok = fails = 0
+
+    def request(prompt):
+        nonlocal billable
+        if billable >= budget:
+            raise NotBilled(f'reached the limit of {budget} billable requests for this run')
+        try:
+            return generate(key, a.model, prompt, a.wav)
+        except (Blocked, NotBilled):
+            raise
+        except Exception:
+            billable += 1
+            raise
+
     for n, j in enumerate(jobs, 1):
         print(f"[{n}/{len(jobs)}] {j['time']}/{j['title']} ...", flush=True)
         t0 = time.time()
         used_prompt = j['prompt']
         try:
             try:
-                audio, mime = generate(key, a.model, used_prompt, a.wav)
+                audio, mime = request(used_prompt)
             except Blocked:
                 print('    the safety filter rejected the prompt; trying a shorter one')
                 used_prompt = j['simple']
                 try:
-                    audio, mime = generate(key, a.model, used_prompt, a.wav)
+                    audio, mime = request(used_prompt)
                 except Blocked:
                     print('    rejected again; skipping this song')
                     continue
-        except Exception as e:
+            billable += 1
+        except Ambiguous as e:
             print(f'    failed: {e}')
+            print('    not resending: the server may already have made (and billed) this song')
             fails += 1
-            if ('HTTP 4' in str(e) and 'HTTP 429' not in str(e)) or fails >= 2:
-                print('    stopping so no more requests are spent on a problem that keeps happening')
+            if fails >= 2:
+                print('    stopping after two uncertain failures in a row')
                 break
             continue
+        except Exception as e:
+            print(f'    failed: {e}')
+            print('    stopping so no more requests are spent on a problem that keeps happening')
+            break
         fails = 0
         ext = '.wav' if 'wav' in mime else '.mp3'
         d = os.path.join(MUSIC, j['time'])
